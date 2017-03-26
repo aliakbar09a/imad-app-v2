@@ -1,19 +1,38 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
-var articleOne={
-    title:'Article|One',
-    heading:'Article One',
-    date:'25 Mar 2017',
-    content:`<p>
-                    This is my fist content.This is my fist content.This is my fist content.This is my fist content.This is my fist content.This is my fist content.This is my fist content.This is my fist content.This is my fist content.This is my fist content.This is my fist content.
-                </p>
-                <p>
-                    This is my fist content.This is my fist content.This is my fist content.This is my fist content.This is my fist content.This is my fist content.This is my fist content.This is my fist content.This is my fist content.This is my fist content.This is my fist content.
-                </p>
-                <p>
-                    This is my fist content.This is my fist content.This is my fist content.This is my fist content.This is my fist content.This is my fist content.This is my fist content.This is my fist content.This is my fist content.This is my fist content.This is my fist content.
-                </p>`
+var articles={
+        'article-one': {
+        title:'Article|One',
+        heading:'Article One',
+        date:'25 Mar 2017',
+        content:`<p>
+                        This is my fist content.This is my fist content.This is my fist content.This is my fist content.This is my fist content.This is my fist content.This is my fist content.This is my fist content.This is my fist content.This is my fist content.This is my fist content.
+                    </p>
+                    <p>
+                        This is my fist content.This is my fist content.This is my fist content.This is my fist content.This is my fist content.This is my fist content.This is my fist content.This is my fist content.This is my fist content.This is my fist content.This is my fist content.
+                    </p>
+                    <p>
+                        This is my fist content.This is my fist content.This is my fist content.This is my fist content.This is my fist content.This is my fist content.This is my fist content.This is my fist content.This is my fist content.This is my fist content.This is my fist content.
+                    </p>`
+        },
+        'article-two':{
+        title:'Article|Two',
+        heading:'Article Two',
+        date:'30 Mar 2017',
+        content:`<p>
+                        This is my second content.
+                    </p>`
+        
+        },
+        'article-three':{
+        title:'Article|Three',
+        heading:'Article Three',
+        date:'5 Apr 2017',
+        content:`<p>
+                        This is my third content.This is my third content.
+                 </p>`
+        }
 };
 
 function createTemplate(data){
@@ -59,17 +78,11 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/article-one',function(req,res){
-  res.send(createTemplate(articleOne));
+app.get('/:articleName',function(req,res){
+    var articleName=req.params.articleName;
+    res.send(createTemplate(articles[articleName]));
 });
 
-app.get('/article-two',function(req,res){
-    res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
-});
-
-app.get('/article-three',function(req,res){
-    res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));
-});
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
