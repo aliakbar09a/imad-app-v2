@@ -13,7 +13,7 @@ var articleOne={
                 </p>
                 <p>
                     This is my fist content.This is my fist content.This is my fist content.This is my fist content.This is my fist content.This is my fist content.This is my fist content.This is my fist content.This is my fist content.This is my fist content.This is my fist content.
-                </p>
+                </p>`
 };
 
 function createTemplate(data){
