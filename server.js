@@ -1,7 +1,7 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
-var content={
+var articleOne={
     title:'Article|One',
     heading:'Article One',
     date:'25 Mar 2017',
