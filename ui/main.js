@@ -1,6 +1,7 @@
 console.log('Loaded!');
 
+var img =document.getElementById('madi');
 
-madi.onclick = function(d) {
-    madi.style.marginleft='100px';
+img.onclick = function( ) {
+    img.style.marginleft='100px';
 };
