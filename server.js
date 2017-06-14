@@ -21,7 +21,8 @@ var articles={
         heading:'Article Two',
         date:'30 Mar 2017',
         content:`<p>
-                        This is my second content.
+                        This is my second content.This is my second content.This is my second content.This is my second content.This is my second content.This is my second content.This is my second content.This is my second content.
+                        This is my second content.This is my second content.This is my second content.This is my second content.This is my second content.This is my second content.This is my second content.This is my second content.This is my second content.This is my second content.
                     </p>`
         
         },
@@ -30,7 +31,8 @@ var articles={
         heading:'Article Three',
         date:'5 Apr 2017',
         content:`<p>
-                        This is my third content.This is my third content.
+                        This is my third content.This is my third content.This is my third content.This is my third content.This is my third content.This is my third content.This is my third content.This is my third content.This is my third content.This is my third content.
+                        This is my third content.This is my third content.This is my third content.This is my third content.This is my third content.This is my third content.This is my third content.This is my third content.
                  </p>`
         }
 };
