@@ -13,4 +13,6 @@ button.onclick = function(){
             }
         }
     };
+    request.open('GET','http://aliakbar09a.imad.hasura-app.io/counter',true);
+    request.send(null);
 };
